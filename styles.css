@@ -174,52 +174,6 @@ body {
 }
 
 /* ===========================
-   PARTNERSHIP BANNER
-   =========================== */
-
-.partnership-future {
-    padding: 110px 20px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-    color: var(--text);
-}
-
-.bridge-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000000a9;
-    gap: 60px;
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 1px solid #d3e2ea;
-    box-shadow: 0 10px 30px rgba(0, 80, 120, 0.08);
-}
-
-.partnership-future h3 {
-    font-size: 30px;
-    color: #244e63;
-}
-
-.partnership-future p {
-    color: #4a6a7a;
-    line-height: 1.7;
-}
-
-.partner-name {
-    margin-top: 10px;
-    font-weight: 600;
-    color: #2f7c9f;
-}
-
-.logo-box img {
-    width: 150px;
-    opacity: 0.9;
-}
-
-/* ===========================
    ABOUT SECTION
    =========================== */
 
@@ -232,13 +186,13 @@ body {
 .section-header h2 {
     font-size: 40px;
     text-align: center;
-    color: #244e63;
+    color: #ffffff !important;
 }
 
 .section-subtitle {
     text-align: center;
     color: #5c7a8a;
-    margin-bottom: 60px;
+    margin-bottom: 60px !important;
 }
 
 .about-content {
@@ -251,10 +205,11 @@ body {
 }
 
 .about-image img {
-    width: 100%;
+    width: 60% !important;
     border-radius: 16px;
-    border: 1px solid #cfdfe7;
-    box-shadow: 0 20px 40px rgba(0, 70, 100, 0.08);
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: 40px;
 }
 
 .about-text p {
@@ -321,8 +276,12 @@ body {
 
 .problem-section {
     padding: 120px 20px;
-    background: linear-gradient(180deg, rgb(0, 0, 0), rgba(255, 255, 255, 0.193)) !important;
-    position: relative;
+    background: linear-gradient(
+        to bottom,
+        var(--black-dark) 0%,
+        #000000 60%,
+        #022f4490 100%
+    ) !important;
     overflow: hidden;
 }
 
@@ -429,7 +388,12 @@ blockquote {
 
 .solution-section {
     padding: 120px 20px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.193), rgb(0, 0, 0)) !important;
+    background: linear-gradient(
+        to bottom,
+        #022f4490 0%,
+        #000000 60%,
+        var(--black-dark) 100%
+    ) !important;
     position: relative;
     overflow: hidden;
 }
@@ -551,7 +515,6 @@ blockquote {
 
 .science-section {
     padding: 130px 20px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.947), rgba(1, 14, 47, 0.667)) !important;
     position: relative;
     overflow: hidden;
 }
@@ -623,7 +586,7 @@ blockquote {
 }
 
 .mechanism-image img {
-    max-width: 100%;
+    max-width: 40%;
     border-radius: 12px;
     border: 1px solid rgba(0, 207, 255, 0.2);
     box-shadow: 0 0 30px rgba(0, 207, 255, 0.15);
@@ -750,15 +713,15 @@ blockquote {
 }
 
 .vagus-image {
-    margin: 25px 0;
+    margin: 5px 0;
 }
 
 .vagus-image img {
-    width: 100%;
+    image-rendering: crisp-edges !important;
+    width: 300px !important;
     border-radius: 12px;
     border: 1px solid rgba(0, 207, 255, 0.2);
     box-shadow: 0 0 30px rgba(0, 207, 255, 0.15);
-    max-height: 400px;
     object-fit: cover;
 }
 
@@ -974,7 +937,7 @@ blockquote {
 
 .methodology-section {
     padding: 130px 20px;
-    background-image: url(/therevivehive/images/cells.png) !important;
+    background-image: url(therevivehive/images/cells.png) !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -1305,111 +1268,12 @@ blockquote {
 }
 
 /* ===========================
-   OFFERINGS SECTION
-   =========================== */
-
-.offerings-section {
-    padding: 130px 20px;
-    background: linear-gradient(135deg, var(--black-dark) 0%, #0d1520 100%) !important;
-    position: relative;
-    overflow: hidden;
-}
-
-.offerings-section::before {
-    content: "";
-    position: absolute;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(0, 230, 195, 0.1), transparent 70%) !important;
-    top: -200px;
-    left: -200px;
-    filter: blur(40px);
-}
-
-.offerings-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 1200px;
-    margin: auto;
-    position: relative;
-    z-index: 2;
-}
-
-.offering-card {
-    padding: 30px;
-    border-radius: 12px;
-    background: rgba(19, 171, 148, 0.08) !important;
-    border: 1px solid rgba(0, 230, 195, 0.3) !important;
-    box-shadow: 0 0 15px rgba(0, 230, 195, 0.12);
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-.offering-card:hover {
-    transform: translateY(-8px);
-    background: rgba(0, 230, 196, 0.045) !important;
-    border-color: rgba(0, 230, 195, 0.6) !important;
-    box-shadow: 0 0 30px rgba(0, 230, 195, 0.3);
-}
-
-.offering-card h3 {
-    color: var(--white) !important;
-    margin-bottom: 20px !important;
-}
-
-.offering-card p {
-    font-size: 14px;
-    color: var(--grey-light) !important;
-    line-height: 1.6;
-}
-
-.designed-for {
-    margin-top: 90px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-.designed-for h3 {
-    font-size: 24px;
-    color: var(--white) !important;
-    margin-bottom: 30px;
-}
-
-.designed-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 700px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.designed-list li {
-    padding: 15px 20px;
-    border-radius: 10px;
-    background: rgba(0, 230, 195, 0.08);
-    border: 1px solid rgba(0, 230, 195, 0.3);
-    color: var(--grey-light) !important;
-    transition: 0.3s ease;
-}
-
-.designed-list li:hover {
-    transform: translateY(-4px);
-    background: rgba(0, 230, 195, 0.15);
-    border-color: rgba(0, 230, 195, 0.6);
-    box-shadow: 0 0 20px rgba(0, 230, 195, 0.2);
-}
-
-/* ===========================
    SUCCESS STORIES SECTION
    =========================== */
 
 .success-stories-section {
     padding: 140px 20px;
-    background-image: url(/therevivehive/images/success.png) !important;
+    background-image: url(therevivehive/images/success.png) !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -1531,318 +1395,76 @@ blockquote {
 }
 
 /* ===========================
-   CLINICAL EVIDENCE SECTION
+   RESPONSIVE: Mobile / Tablet
    =========================== */
 
-.clinical-evidence-section {
-    padding: 140px 20px;
-    background: linear-gradient(135deg, var(--black-dark) 0%, #0f1622 100%);
-    position: relative;
-    overflow: hidden;
+/* Medium screens (tablets / small laptops) */
+@media (max-width: 1024px) {
+    .container { padding: 0 18px; }
+    .service-grid,
+    .solution-grid,
+    .stories-grid,
+    .why-grid,
+    .offerings-grid,
+    .schedule-grid,
+    .protocols-grid,
+    .experience-grid,
+    .results-highlight { grid-template-columns: repeat(2, 1fr); }
+
+    .problem-content,
+    .about-content,
+    .case-before-after { grid-template-columns: 1fr; }
+
+    .hero { padding: 80px 16px; min-height: 75vh; }
+    .hero-subtitle { font-size: 1.05rem; }
 }
 
-.clinical-evidence-section::before {
-    content: "";
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(0, 207, 255, 0.1), transparent 70%);
-    top: -300px;
-    right: -300px;
-    filter: blur(40px);
+/* Small screens (phones) */
+@media (max-width: 768px) {
+    .navbar { top: 12px; }
+    .nav-menu { flex-direction: column; gap: 10px; background: rgba(0,0,0,0.35); padding: 8px 12px; border-radius: 10px; }
+    .nav-menu a { font-size: 0.95rem; }
+
+    .hero { padding: 60px 14px; min-height: 70vh; }
+    .hero-content { max-width: 92%; }
+    .hero-subtitle { font-size: 1rem; line-height: 1.6; }
+
+    .cta-button,
+    .cta-button-large { display: block; width: 100%; box-sizing: border-box; margin: 0.5rem 0; }
+
+    .partnership-future .bridge-content,
+    .vagus-explanation,
+    .mechanism-explanation { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+    .cet-mechanism { grid-template-columns: repeat(2, 1fr); }
 }
 
-.evidence-intro {
-    text-align: center;
-    max-width: 850px;
-    margin: 0 auto 60px;
-    color: var(--grey-light) !important;
-    line-height: 1.8;
-    position: relative;
-    z-index: 2;
-}
+/* Extra small (narrow phones) */
+@media (max-width: 480px) {
+    .container { padding: 0 12px; }
+    .hero { padding: 40px 12px; min-height: 60vh; }
+    .hero-subtitle { font-size: 0.95rem; }
 
-.case-study {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px;
-    border-radius: 12px;
-    background: rgba(0, 207, 255, 0.08);
-    border: 1px solid rgba(0, 207, 255, 0.3);
-    box-shadow: 0 0 30px rgba(0, 207, 255, 0.15);
-    position: relative;
-    z-index: 2;
-}
+    .section-header h2 { font-size: 24px; }
 
-.case-study h3 {
-    text-align: center;
-    color: var(--white);
-    margin-bottom: 40px;
-}
+    .service-grid,
+    .solution-grid,
+    .stories-grid,
+    .why-grid,
+    .offerings-grid,
+    .schedule-grid,
+    .protocols-grid,
+    .experience-grid,
+    .results-highlight,
+    .protocols-grid { grid-template-columns: 1fr; }
 
-.case-before-after {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
+    .service-card,
+    .solution-card,
+    .story-card { padding: 18px; }
 
-.case-section {
-    padding: 25px;
-    border-radius: 10px;
-    background: rgba(0, 207, 255, 0.05);
-    border: 1px solid rgba(0, 207, 255, 0.2);
-    transition: 0.3s ease;
-}
-
-.case-section:hover {
-    transform: translateY(-6px);
-    background: rgba(0, 207, 255, 0.12);
-    box-shadow: 0 0 20px rgba(0, 207, 255, 0.15);
-}
-
-.case-section h4 {
-    color: var(--white);
-    margin-bottom: 8px;
-}
-
-.case-timeline {
-    font-size: 12px;
-    color: var(--electric-blue);
-    font-weight: 600;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-}
-
-.case-image {
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 15px;
-    border: 1px solid rgba(0, 207, 255, 0.2);
-    box-shadow: 0 0 20px rgba(0, 207, 255, 0.1);
-}
-
-.case-image img {
-    width: 100%;
-    display: block;
-    max-height: 300px;
-    object-fit: cover;
-}
-
-.case-description {
-    font-size: 14px;
-    color: var(--grey-light);
-    line-height: 1.7;
-}
-
-.clinical-note {
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 85, 85, 0.05);
-    border: 1px solid rgba(255, 85, 85, 0.2);
-    color: var(--grey-light);
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-/* ===========================
-   PARTNERSHIP SECTION
-   =========================== */
-
-.partnership-section {
-    padding: 130px 20px;
-    background: linear-gradient(135deg, var(--charcoal) 0%, var(--black-dark) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.partnership-section::before {
-    content: "";
-    position: absolute;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(0, 230, 195, 0.1), transparent 70%);
-    top: -200px;
-    left: -200px;
-    filter: blur(40px);
-}
-
-.partnership-section .section-header h2 {
-    color: var(--white);
-    text-shadow: 0 0 20px rgba(0, 230, 195, 0.3);
-}
-
-.partnership-section .section-subtitle {
-    color: var(--teal);
-    text-shadow: 0 0 10px rgba(0, 230, 195, 0.3);
-}
-
-.partnership-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    max-width: 1200px;
-    margin: auto;
-    position: relative;
-    z-index: 2;
-}
-
-.partnership-text {
-    padding: 35px;
-    border-radius: 12px;
-    background: rgba(0, 230, 195, 0.08);
-    border: 1px solid rgba(0, 230, 195, 0.3);
-    box-shadow: 0 0 20px rgba(0, 230, 195, 0.12);
-}
-
-.partnership-text h3 {
-    color: var(--white);
-    margin-bottom: 15px;
-}
-
-.partnership-text p {
-    color: var(--grey-light);
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.partnership-services {
-    list-style: none;
-    padding: 0;
-    margin: 25px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.partnership-services li {
-    padding: 12px 15px;
-    border-radius: 8px;
-    background: rgba(0, 230, 195, 0.08);
-    border: 1px solid rgba(0, 230, 195, 0.2);
-    font-size: 14px;
-    color: var(--grey-light);
-    transition: 0.3s ease;
-}
-
-.partnership-services li:hover {
-    transform: translateY(-3px);
-    background: rgba(0, 230, 195, 0.15);
-    border-color: rgba(0, 230, 195, 0.4);
-    box-shadow: 0 0 15px rgba(0, 230, 195, 0.15);
-}
-
-.partnership-benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.benefit-item {
-    padding: 15px;
-    border-radius: 10px;
-    background: rgba(0, 230, 195, 0.08);
-    border: 1px solid rgba(0, 230, 195, 0.3);
-    color: var(--grey-light);
-    font-size: 14px;
-    transition: 0.3s ease;
-}
-
-.benefit-item:hover {
-    transform: translateY(-3px);
-    background: rgba(0, 230, 195, 0.15);
-    border-color: rgba(0, 230, 195, 0.6);
-    box-shadow: 0 0 15px rgba(0, 230, 195, 0.15);
-}
-
-/* ===========================
-   CTA FINAL SECTION
-   =========================== */
-
-.cta-final-section {
-    padding: 140px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, var(--charcoal) 0%, var(--black-light) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-final-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle, rgba(0, 230, 195, 0.1), transparent 60%);
-    pointer-events: none;
-}
-
-.cta-final-section .container {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-}
-
-.cta-final-section h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
-    text-shadow: 0 0 20px rgba(0, 230, 195, 0.3);
-}
-
-.cta-final-section p {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    font-size: 16px;
-    color: var(--grey-light);
-}
-
-/* ===========================
-   FOOTER
-   =========================== */
-
-.footer {
-    padding: 80px 20px;
-    background: var(--black-dark);
-    border-top: 1px solid rgba(0, 230, 195, 0.2);
-    color: var(--white);
-}
-
-.footer .container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.footer-section h3 {
-    margin-bottom: 10px;
-    color: var(--teal);
-    text-shadow: 0 0 10px rgba(0, 230, 195, 0.3);
-}
-
-.footer-section p,
-.footer-section a {
-    color: var(--grey-light);
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s ease;
-}
-
-.footer-section a:hover {
-    color: var(--electric-blue);
-    text-shadow: 0 0 10px rgba(0, 207, 255, 0.4);
-}
-
-.footer-bottom {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 12px;
-    color: var(--grey-dark);
-    border-top: 1px solid rgba(0, 230, 195, 0.1);
-    padding-top: 20px;
+    .logo-box img { width: 120px; }
+    .partnership-future { padding: 40px 12px; }
+    .scroll-indicator { font-size: 1.2rem; }
 }
 
 /* ===========================
@@ -1982,86 +1604,6 @@ blockquote {
    GLOBAL STYLES
    =========================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--font-primary);
-    background-color: var(--black-dark);
-    color: var(--white-soft);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-/* ===========================
-   TYPOGRAPHY
-   =========================== */
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    letter-spacing: -0.5px;
-}
-
-h1 {
-    font-size: 4rem;
-    line-height: 1.1;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 3rem;
-    line-height: 1.15;
-    color: var(--white);
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-h3 {
-    font-size: 1.8rem;
-    color: var(--white);
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-h4 {
-    font-size: 1.3rem;
-    color: var(--electric-blue);
-    font-weight: 600;
-    margin-bottom: 0.8rem;
-}
-
-p {
-    color: var(--grey-light);
-    margin-bottom: 1rem;
-    line-height: 1.8;
-    font-size: 1rem;
-}
-
-.text-glow {
-    color: var(--teal);
-    text-shadow: 0 0 20px rgba(0, 230, 195, 0.5);
-}
-
-.text-blue-glow {
-    color: var(--electric-blue);
-    text-shadow: 0 0 20px rgba(0, 207, 255, 0.5);
-}
 
 /* ===========================
    BUTTONS
@@ -2115,7 +1657,7 @@ p {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%;
+    width: fit-content;
     background: linear-gradient(
     135deg,
     rgba(8, 110, 115, 0.75),
@@ -2988,9 +2530,9 @@ blockquote {
 
     background: linear-gradient(
         to bottom,
-        var(--black-dark) 0%,
-        #0f1622 60%,
-        var(--charcoal) 100%
+        #000000 10%,
+        #011a3c 60%,
+        #000000 100%
     );
 }
 
@@ -3794,21 +3336,10 @@ blockquote {
 
     background: linear-gradient(
         to bottom,
-        var(--black-dark) 0%,
-        #0d1520 60%,
-        var(--charcoal) 100%
+        #000000 10%,
+        #011a3c 60%,
+        #000000 100%
     );
-}
-
-/* soft healing field */
-.offerings-section::before {
-    content: "";
-    position: absolute;
-    width: 900px;
-    height: 900px;
-    background: radial-gradient(circle, rgba(0, 200, 160, 0.07), transparent 70%);
-    top: -300px;
-    left: -300px;
 }
 
 /* HEADER */
@@ -3825,7 +3356,7 @@ blockquote {
 }
 
 .section-subtitle {
-    color: #4b6b63;
+    color: #ffffff;
 }
 
 /* OFFERINGS GRID */
@@ -3841,9 +3372,8 @@ blockquote {
 .offering-card {
     padding: 30px;
     border-radius: 18px;
-
     background: rgba(12,18,24,0.42);
-    border: 1px solid rgba(0, 200, 160, 0.06);
+    border-bottom: 4px solid rgb(0, 200, 160);
     backdrop-filter: blur(10px);
     transition: 0.3s ease;
     text-align: center;
@@ -3855,13 +3385,13 @@ blockquote {
 }
 
 .offering-card h3 {
-    color: #0b3d33;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
 .offering-card p {
     font-size: 14px;
-    color: #2b3b35;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -3873,7 +3403,7 @@ blockquote {
 
 .designed-for h3 {
     font-size: 24px;
-    color: #0b3d33;
+    color: #ffffff;
     margin-bottom: 30px;
 }
 
@@ -4086,8 +3616,8 @@ blockquote {
     background: linear-gradient(
         to bottom,
         var(--black-dark) 0%,
-        #0f1622 60%,
-        var(--charcoal) 100%
+        #000000 60%,
+        #022f4490 100%
     );
 }
 
@@ -4116,7 +3646,7 @@ blockquote {
 }
 
 .section-subtitle {
-    color: #4b6b63;
+    color: #ffffff;
 }
 
 /* INTRO */
@@ -4124,7 +3654,7 @@ blockquote {
     text-align: center;
     max-width: 850px;
     margin: 0 auto 60px;
-    color: #2b3b35;
+    color: #ffffff;
     line-height: 1.8;
 }
 
@@ -4144,7 +3674,7 @@ blockquote {
 /* TITLE */
 .case-study h3 {
     text-align: center;
-    color: #0b3d33;
+    color: #e8f2f9;
     margin-bottom: 40px;
 }
 
@@ -4160,7 +3690,7 @@ blockquote {
     padding: 25px;
     border-radius: 16px;
 
-    background: rgba(10,15,20,0.42);
+    background: rgb(10, 15, 20);
     border: 1px solid rgba(0, 200, 160, 0.06);
     transition: 0.3s ease;
 }
@@ -4172,14 +3702,14 @@ blockquote {
 
 /* SUB HEADERS */
 .case-section h4 {
-    color: #0b3d33;
+    color: #ffffff;
     margin-bottom: 8px;
 }
 
 /* TIMELINE LABEL */
 .case-timeline {
     font-size: 12px;
-    color: #00c9a7;
+    color: #00aeff;
     font-weight: 600;
     margin-bottom: 15px;
     letter-spacing: 1px;
@@ -4191,7 +3721,7 @@ blockquote {
     overflow: hidden;
     margin-bottom: 15px;
 
-    border: 1px solid rgba(0,200,160,0.2);
+    border-left: 4px solid rgb(0, 255, 204);
     box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
@@ -4203,7 +3733,7 @@ blockquote {
 /* TEXT */
 .case-description {
     font-size: 14px;
-    color: #2b3b35;
+    color: #ffffff;
     line-height: 1.7;
 }
 
@@ -4213,10 +3743,9 @@ blockquote {
     padding: 20px;
     border-radius: 14px;
 
-    background: rgba(0, 200, 160, 0.06);
-    border: 1px solid rgba(0, 200, 160, 0.2);
-
-    color: #2b3b35;
+    background: rgba(3, 62, 82, 0);
+    border-left: 4px solid rgb(0, 255, 204);
+    color: #ffffff;
     font-size: 13px;
     line-height: 1.6;
 }
@@ -4239,11 +3768,12 @@ blockquote {
 
     background: linear-gradient(
         to bottom,
-        var(--black-dark) 0%,
-        #0d1520 60%,
-        var(--charcoal) 100%
+        #022f4490 0%,
+        #000000 60%,
+        var(--black-dark) 100%
     );
 }
+
 
 /* soft alliance glow */
 .partnership-section::before {
@@ -4375,11 +3905,10 @@ blockquote {
     position: relative;
     padding: 140px 20px;
     text-align: center;
-
     background: linear-gradient(
         135deg,
-        #0b3d33,
-        #00c9a7
+        #0573bd,
+        #145769
     );
     color: #ffffff;
 }
@@ -4411,7 +3940,7 @@ blockquote {
     border-radius: 50px;
     border: none;
 
-    background: linear-gradient(135deg, var(--teal), var(--electric-blue));
+    background: linear-gradient(135deg, #0049795f, #00378057);
     color: var(--white);
 
     font-weight: 600;
@@ -4428,7 +3957,7 @@ blockquote {
 /* FOOTER */
 .footer {
     padding: 80px 20px;
-    background: #0b1f1a;
+    background: #000000;
     color: #ffffff;
 }
 
@@ -4442,7 +3971,7 @@ blockquote {
 
 .footer-section h3 {
     margin-bottom: 10px;
-    color: #00c9a7;
+    color: #ffffff;
 }
 
 .footer-section p,
