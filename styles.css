@@ -1997,6 +1997,27 @@ blockquote {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Constrain large content images (About / Science / Vagus / Case images)
+   Keep links unchanged; just limit rendered size and preserve aspect ratio */
+.about-image img {
+    max-width: 480px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.mechanism-image img,
+.vagus-image img,
+.case-image img {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
 .about-image::after {
     content: "";
     position: absolute;
